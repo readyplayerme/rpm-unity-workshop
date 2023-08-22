@@ -60,7 +60,6 @@ public class ReactionCollectionEditor : EditorWithSubEditors<ReactionEditor, Rea
         editor.reactionsProperty = reactionsProperty;
     }
 
-
     public override void OnInspectorGUI ()
     {
         // Pull all the information from the target into the serializedObject.

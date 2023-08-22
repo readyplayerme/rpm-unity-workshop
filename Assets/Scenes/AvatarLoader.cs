@@ -31,5 +31,12 @@ public class AvatarLoader : MonoBehaviour
 
         Transform headTop = GameObject.Find("HeadTop_End").transform;
         disguise.transform.SetParent(headTop);
+        disguise.transform.localPosition = new Vector3(0, -0.11f, 0.08f);
+
+        ReactionCollection[] reactionColelctions = FindObjectsByType<ReactionCollection>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        foreach (ReactionCollection reactionCollection in reactionColelctions)
+        {
+            reactionCollection.SetPlayerAnimator(animator);
+        }
     }
 }

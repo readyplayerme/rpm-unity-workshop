@@ -1,8 +1,7 @@
-﻿using UnityEngine;
+using UnityEngine;
 
-public class AnimationReaction : DelayedReaction
+public class PlayerAnimationReaction : DelayedReaction
 {
-    public bool isPlayer;
     public Animator animator;   // The Animator that will have its trigger parameter set.
     public string trigger;      // The name of the trigger parameter to be set.
 

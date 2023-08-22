@@ -25,6 +25,23 @@ public class ReactionCollection : MonoBehaviour
         }
     }
 
+    public void SetPlayerAnimator(Animator animator)
+    {
+        foreach (Reaction reaction in reactions)
+        {   
+            if(reaction is PlayerAnimationReaction)
+            {
+                PlayerAnimationReaction playerAnimationReaction = reaction as PlayerAnimationReaction;
+                playerAnimationReaction.animator = animator;
+            }
+            
+            if(reaction is AnimationReaction)
+            {
+                AnimationReaction animReaction = reaction as AnimationReaction;
+                if(animReaction.isPlayer) animReaction.animator = animator;
+            }
+        }
+    }
 
     public void React ()
     {
