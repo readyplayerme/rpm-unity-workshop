@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Workshop/Main.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Unity Technologies/Adventure - Sample Game/Scenes/Persistent.unity
@@ -17,7 +17,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Unity Technologies/Adventure - Sample Game/Scenes/Market.unity
     guid: 3020f6f7c8ece2f4da9fa9ca87063961
-  - enabled: 1
-    path: Assets/Unity Technologies/Adventure - Sample Game/Scenes/yMarket.unity
-    guid: 3e807af4d5fba194182be5461117e9ac
   m_configObjects: {}

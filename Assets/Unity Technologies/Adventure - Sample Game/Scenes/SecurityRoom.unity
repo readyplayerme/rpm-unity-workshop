@@ -608,7 +608,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 730105697}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29103d8075f789345997a0adb6a7520e, type: 3}
   m_Name: 
@@ -656,6 +656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0
+  isPlayer: 0
   animator: {fileID: 0}
   trigger: 
 --- !u!114 &832231904
@@ -883,6 +884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 2
+  isPlayer: 0
   animator: {fileID: 0}
   trigger: 
 --- !u!114 &923580822
@@ -1695,6 +1697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0
+  isPlayer: 0
   animator: {fileID: 0}
   trigger: 
 --- !u!1001 &1183915326
@@ -1810,6 +1813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0
+  isPlayer: 0
   animator: {fileID: 0}
   trigger: 
 --- !u!114 &1238939899
@@ -2242,6 +2246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0
+  isPlayer: 0
   animator: {fileID: 0}
   trigger: 
 --- !u!114 &1610222598
@@ -2257,6 +2262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0
+  isPlayer: 0
   animator: {fileID: 0}
   trigger: 
 --- !u!1 &1627901430
@@ -2668,6 +2674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0
+  isPlayer: 0
   animator: {fileID: 0}
   trigger: 
 --- !u!114 &1923159969

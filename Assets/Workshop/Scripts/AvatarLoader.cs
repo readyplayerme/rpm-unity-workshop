@@ -3,26 +3,36 @@ using ReadyPlayerMe.Core;
 
 public class AvatarLoader : MonoBehaviour
 {
-    [SerializeField] private string avatarUrl;
     [SerializeField] PlayerMovement playerMovement;
     [SerializeField] private RuntimeAnimatorController animatorController;
     [SerializeField] private GameObject disguise;
+    [SerializeField] private GameObject ghost;
     
+    private void Awake()
+    {
+        playerMovement.enabled = true;
+    }
+
     private void Start()
     {
         AvatarObjectLoader loader = new AvatarObjectLoader();
+        string avatarUrl = PlayerPrefs.GetString("AvatarUrl");
         loader.LoadAvatar(avatarUrl);
         loader.OnCompleted += OnAvatarLoaded;
     }
 
     private void OnAvatarLoaded(object sender, CompletionEventArgs e)
     {
+        ghost.SetActive(false);
+        
         GameObject avatar = e.Avatar;
         
+        // Set avatar as child of this game object
         avatar.transform.SetParent(transform);
         avatar.transform.localPosition = Vector3.zero;
         avatar.transform.localRotation = Quaternion.identity;
         
+        // Set avatar animator
         Animator animator = e.Avatar.GetComponent<Animator>();
         animator.runtimeAnimatorController = animatorController;
         
