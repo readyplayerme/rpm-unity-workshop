@@ -7,7 +7,7 @@ public class GhostControl : MonoBehaviour
     {
         Component[] components = transform.parent.GetComponents<Component>();
 
-        if(components.All(c => c.name != "AvatarLoader"))
+        if(components.All(c => c.GetType().Name != "AvatarLoader"))
         {
             StartScene();
         }
