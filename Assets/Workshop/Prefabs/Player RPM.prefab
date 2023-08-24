@@ -98,8 +98,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8128498304719622308}
-  - {fileID: 4720565598070908000}
   - {fileID: 2723180192974319218}
+  - {fileID: 4720565598070908000}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &6508093608568040288
@@ -172,7 +172,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorController: {fileID: 9100000, guid: f8a8e58634e93d1458658bdb4b6ba079, type: 2}
-  disguise: {fileID: 4720565598071142464}
   ghost: {fileID: 3351097421213824200}
 --- !u!1 &7899065009428096246
 GameObject:

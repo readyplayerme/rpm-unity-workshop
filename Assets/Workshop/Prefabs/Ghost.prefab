@@ -83,6 +83,11 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3501836223160941379, guid: 3c6da66795df1aa41a29e4a30d1356b7,
+        type: 3}
+      propertyPath: m_Bones.Array.data[6]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8879528566716807029, guid: 3c6da66795df1aa41a29e4a30d1356b7,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -104,7 +109,8 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -5250136804600098689, guid: 3c6da66795df1aa41a29e4a30d1356b7, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3c6da66795df1aa41a29e4a30d1356b7,
