@@ -37,11 +37,7 @@ public class SceneController : MonoBehaviour
         
         // Start the first scene loading and wait for it to finish.
         yield return StartCoroutine (LoadSceneAndSetActive (startingSceneName));
-
-        // Once the scene is finished loading, start fading in.
-        StartCoroutine (Fade (0f));
     }
-
 
     // This is the main external point of contact and influence from the rest of the project.
     // This will be called by a SceneReaction when the player wants to switch scenes.
@@ -74,9 +70,6 @@ public class SceneController : MonoBehaviour
         // If this event has any subscribers, call it.
         if (AfterSceneLoad != null)
             AfterSceneLoad ();
-        
-        // Start fading back in and wait for it to finish before exiting the function.
-        yield return StartCoroutine (Fade (0f));
     }
 
 
@@ -95,8 +88,7 @@ public class SceneController : MonoBehaviour
         SceneManager.SetActiveScene (newlyLoadedScene);
     }
 
-
-    private IEnumerator Fade (float finalAlpha)
+    public IEnumerator Fade (float finalAlpha)
     {
         // Set the fading flag to true so the FadeAndSwitchScenes coroutine won't be called again.
         isFading = true;

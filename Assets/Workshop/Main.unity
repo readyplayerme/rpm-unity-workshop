@@ -220,7 +220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 985bd005c1685cf4cab194d6f664b10d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: {fileID: 102900000, guid: ef18a6fcc8276e541a14d91f5fb2d496, type: 3}
   inputField: {fileID: 1786355951}
   button: {fileID: 323929645}
 --- !u!4 &122758716

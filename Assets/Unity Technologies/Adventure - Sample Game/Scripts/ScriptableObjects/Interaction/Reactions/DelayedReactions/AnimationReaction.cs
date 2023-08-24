@@ -18,6 +18,12 @@ public class AnimationReaction : DelayedReaction
 
     protected override void ImmediateReaction ()
     {
+        if (isPlayer)
+        {
+            var player = GameObject.FindWithTag("Player");
+            animator = player.GetComponent<PlayerMovement>().animator;
+        }
+        
         animator.SetTrigger (triggerHash);
     }
 }
