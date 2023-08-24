@@ -76,7 +76,6 @@ GameObject:
   - component: {fileID: 6508093608568040288}
   - component: {fileID: 21931388825325312}
   - component: {fileID: 3564717785341078932}
-  - component: {fileID: 6529155273065726143}
   m_Layer: 0
   m_Name: Player RPM
   m_TagString: Untagged
@@ -159,20 +158,6 @@ MonoBehaviour:
   uniqueIdentifier: DisguiseOnFaceActivity
   saveData: {fileID: 11400000, guid: 55d72825bf06cf44e9cbc1b37812cc6f, type: 2}
   gameObjectToSave: {fileID: 4720565598071142464}
---- !u!114 &6529155273065726143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4724998810859540533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f649e4c082b577346b2228c093c36fe7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ghost: {fileID: 3351097421213824200}
-  animatorController: {fileID: 9100000, guid: f8a8e58634e93d1458658bdb4b6ba079, type: 2}
 --- !u!1 &7899065009428096246
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,12 +266,6 @@ Animator:
 --- !u!4 &2723180192974319218 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3855127248632377067, guid: 87c97ddedda474c4186895f179262c84,
-    type: 3}
-  m_PrefabInstance: {fileID: 1173896044895027353}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &3351097421213824200 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4524984450732864593, guid: 87c97ddedda474c4186895f179262c84,
     type: 3}
   m_PrefabInstance: {fileID: 1173896044895027353}
   m_PrefabAsset: {fileID: 0}
