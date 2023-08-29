@@ -250,7 +250,7 @@ PrefabInstance:
     - target: {fileID: 4524984450732864593, guid: 87c97ddedda474c4186895f179262c84,
         type: 3}
       propertyPath: m_Name
-      value: Ghost
+      value: Default Character
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
