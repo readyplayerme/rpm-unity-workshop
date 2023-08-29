@@ -9,10 +9,10 @@ public class AvatarLoader : MonoBehaviour
     
     private void Start()
     {
-        string avatarUrl = PlayerPrefs.GetString("AvatarUrl");
+        string url = PlayerPrefs.GetString("AvatarUrl");
         
         AvatarObjectLoader loader = new AvatarObjectLoader();
-        loader.LoadAvatar(avatarUrl);
+        loader.LoadAvatar(url);
         loader.OnCompleted += OnAvatarLoaded;
     }
 
