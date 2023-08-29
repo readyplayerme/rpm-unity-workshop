@@ -28,7 +28,7 @@ public class AvatarLoader : MonoBehaviour
         avatar.transform.localRotation = Quaternion.identity;
         
         // Set avatar animator
-        Animator animator = e.Avatar.GetComponent<Animator>();
+        Animator animator = avatar.GetComponent<Animator>();
         animator.runtimeAnimatorController = animatorController;
         playerMovement.animator = animator;
     }
