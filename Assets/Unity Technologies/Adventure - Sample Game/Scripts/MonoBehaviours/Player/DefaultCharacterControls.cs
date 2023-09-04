@@ -1,7 +1,7 @@
 using System.Linq;
 using UnityEngine;
 
-public class GhostControl : MonoBehaviour
+public class DefaultCharacterControls : MonoBehaviour
 {
     private void Awake()
     {
@@ -15,7 +15,10 @@ public class GhostControl : MonoBehaviour
 
     private void OnDisable()
     {
-        StartScene();
+        if (Application.isPlaying)
+        {
+            StartScene();
+        }
     }
     
     private void StartScene()
