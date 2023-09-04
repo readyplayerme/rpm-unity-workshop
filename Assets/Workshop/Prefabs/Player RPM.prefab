@@ -144,6 +144,7 @@ MonoBehaviour:
   slowingSpeed: 0.175
   turnSpeedThreshold: 0.5
   inputHoldDelay: 0.5
+  animatorController: {fileID: 9100000, guid: f8a8e58634e93d1458658bdb4b6ba079, type: 2}
 --- !u!114 &3564717785341078932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,8 +173,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultCharacter: {fileID: 3351097421213824200}
-  animatorController: {fileID: 9100000, guid: f8a8e58634e93d1458658bdb4b6ba079, type: 2}
-  playerMovement: {fileID: 21931388825325312}
 --- !u!1 &7899065009428096246
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,12 +8,12 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;                   // Reference to the animator component.
     public NavMeshAgent agent;                  // Reference to the nav mesh agent component.
     public SaveData playerSaveData;             // Reference to the save data asset containing the player's starting position.
+    public RuntimeAnimatorController animatorController;
     public float turnSmoothing = 15f;           // The amount of smoothing applied to the player's turning using spherical interpolation.
     public float speedDampTime = 0.1f;          // The approximate amount of time it takes for the speed parameter to reach its value upon being set.
     public float slowingSpeed = 0.175f;         // The speed the player moves as it reaches close to it's destination.
     public float turnSpeedThreshold = 0.5f;     // The speed beyond which the player can move and turn normally.
     public float inputHoldDelay = 0.5f;         // How long after reaching an interactable before input is allowed again.
-    
 
     private Interactable currentInteractable;   // The interactable that is currently being headed towards.
     private Vector3 destinationPosition;        // The position that is currently being headed towards, this is the interactionLocation of the currentInteractable if it is not null.
@@ -25,18 +25,21 @@ public class PlayerMovement : MonoBehaviour
                                                 // An hash representing the Speed animator parameter, this is used at runtime in place of a string.
     private readonly int hashLocomotionTag = Animator.StringToHash("Locomotion");
                                                 // An hash representing the Locomotion tag, this is used at runtime in place of a string.
-
-
+    
     public const string startingPositionKey = "starting position";
                                                 // The key used to retrieve the starting position from the playerSaveData.
-
-
+    
     private const float stopDistanceProportion = 0.1f;
                                                 // The proportion of the nav mesh agent's stopping distance within which the player stops completely.
     private const float navMeshSampleDistance = 4f;
-                                                // The maximum distance from the nav mesh a click can be to be accepted.
 
-
+    private void OnTransformChildrenChanged()
+    {
+        Animator[] animators = GetComponentsInChildren<Animator>();
+        animators[0].runtimeAnimatorController = animatorController;
+        animator = animators[0];
+    }
+    
     private void Start()
     {
         // The player will be rotated by this script so the nav mesh agent should not rotate it.
@@ -57,7 +60,6 @@ public class PlayerMovement : MonoBehaviour
         // Set the initial destination as the player's current position.
         destinationPosition = transform.position;
     }
-
 
     private void OnAnimatorMove()
     {
