@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;                   // Reference to the animator component.
     public NavMeshAgent agent;                  // Reference to the nav mesh agent component.
     public SaveData playerSaveData;             // Reference to the save data asset containing the player's starting position.
+    public RuntimeAnimatorController animatorController; // Reference to the animator controller for the player.
     public float turnSmoothing = 15f;           // The amount of smoothing applied to the player's turning using spherical interpolation.
     public float speedDampTime = 0.1f;          // The approximate amount of time it takes for the speed parameter to reach its value upon being set.
     public float slowingSpeed = 0.175f;         // The speed the player moves as it reaches close to it's destination.
@@ -33,9 +34,14 @@ public class PlayerMovement : MonoBehaviour
 
     private const float stopDistanceProportion = 0.1f;
                                                 // The proportion of the nav mesh agent's stopping distance within which the player stops completely.
-    private const float navMeshSampleDistance = 4f;
-                                                // The maximum distance from the nav mesh a click can be to be accepted.
-
+    private const float navMeshSampleDistance = 4f; // The maximum distance from the nav mesh a click can be to be accepted.
+    
+    private void OnTransformChildrenChanged()
+    {
+        Animator[] animators = GetComponentsInChildren<Animator>();
+        animators[0].runtimeAnimatorController = animatorController;
+        animator = animators[0];
+    }
 
     private void Start()
     {
@@ -64,7 +70,6 @@ public class PlayerMovement : MonoBehaviour
         // Set the velocity of the nav mesh agent (which is moving the player) based on the speed that the animator would move the player.
         agent.velocity = animator.deltaPosition / Time.deltaTime;
     }
-
 
     private void Update()
     {

@@ -73,6 +73,7 @@ MonoBehaviour:
   animator: {fileID: 2385589050922605676}
   agent: {fileID: 6508093608568040288}
   playerSaveData: {fileID: 11400000, guid: 55d72825bf06cf44e9cbc1b37812cc6f, type: 2}
+  animatorController: {fileID: 9100000, guid: f8a8e58634e93d1458658bdb4b6ba079, type: 2}
   turnSmoothing: 15
   speedDampTime: 0.1
   slowingSpeed: 0.175
