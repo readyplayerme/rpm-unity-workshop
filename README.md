@@ -9,4 +9,4 @@ This workshop is designed to introduce developers to Ready PLayer Me Studio and 
 You can access the workshop [here](https://readyplayerme.github.io/rpm-developer-workshops/2023/07/10/rpm-unity-sdk-workshop). 
 
 ## Demo video preview 
-https://github.com/readyplayerme/rpm-unity-workshop/assets/3163281/acf0b8c1-6330-4c5e-9a30-9413daf6fd82
+https://github.com/readyplayerme/rpm-unity-workshop/assets/3163281/707bac2b-81ee-48a3-a21c-4d2836be25c0
